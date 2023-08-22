@@ -1,0 +1,99 @@
+.card {
+    width: 360px;
+    position: relative;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 339px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        width: 300px;
+    }
+}
+
+.card__image {
+    width: 360px;
+    height: 201px;
+}
+
+@media screen and (max-width: 900px) {
+    .card__image {
+        width: 339px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card__image {
+        width: 300px;
+        height: 168px;
+    }
+}
+
+.card__conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.card__title {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 20px;
+    margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .card__title {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.card__time {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    color: #A0A0A0;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.card__save-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border-radius: 30px;
+    background-color: #F9F9F9;
+    width: 72px;
+    height: 21px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 9px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.card__save-button:hover {
+    opacity: 0.8;
+}
+
+.card:hover .card__save-button {
+    visibility: visible;
+}
