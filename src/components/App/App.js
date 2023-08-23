@@ -6,6 +6,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
+import NotFoundError from '../NotFoundError/NotFoundError';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/profile' element={<Profile></Profile>}></Route>
       <Route path='/signup' element={<Register></Register>}></Route>
       <Route path='/signin' element={<Login></Login>}></Route>
+      <Route path='*' element={<NotFoundError></NotFoundError>}></Route>
     </Routes>
 
   </div>  
