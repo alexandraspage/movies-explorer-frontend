@@ -8,7 +8,7 @@ function Movies() {
     return (
         <>
             <Header page="movies"></Header>
-            <main>
+            <main className='page-size'>
                 <SearchForm></SearchForm>
                 <MoviesCardList></MoviesCardList>
             </main>

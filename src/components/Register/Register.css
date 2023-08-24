@@ -81,6 +81,11 @@
 }
 
 .form__submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    padding: 0;
     width: 396px;
     height: 45px;
     border-radius: 3px;

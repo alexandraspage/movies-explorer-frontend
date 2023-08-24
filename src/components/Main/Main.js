@@ -11,9 +11,8 @@ function Main() {
   return (
     <>
       <Header page="main"></Header>
-      <main>
+      <main className='page-size'>
         <Promo></Promo>
-        <NavTab></NavTab>
         <AboutProject></AboutProject>
         <Techs></Techs>
         <AboutMe></AboutMe>

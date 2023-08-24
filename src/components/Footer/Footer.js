@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer(){
     return(
-        <footer className="footer">
+        <footer className="footer page-size">
             <h6 className="footer__header">Учебный проект Яндекс.Практикум х BeatFilm.</h6>
             <div className="footer__container">
                 <p className="footer__year">© 2023</p>

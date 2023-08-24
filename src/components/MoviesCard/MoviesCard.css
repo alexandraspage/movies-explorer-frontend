@@ -80,6 +80,7 @@
     -moz-appearance: none;
     appearance: none;
     border: 0;
+    padding: 0;
     position: absolute;
     top: 14px;
     right: 14px;

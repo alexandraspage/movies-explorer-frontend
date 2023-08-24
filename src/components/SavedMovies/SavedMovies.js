@@ -8,7 +8,7 @@ function SavedMovies() {
     return (
         <>
             <Header page="movies"></Header>
-            <main>
+            <main className='page-size'>
                 <SearchForm></SearchForm>
                 <MoviesCardList class='hidden'></MoviesCardList>
             </main>

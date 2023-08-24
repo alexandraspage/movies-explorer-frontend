@@ -29,19 +29,19 @@
         font-size: 18px;
     }
 }
-
-.about-project__header {
+.about-project{
     padding-top: 110px;
 }
 
+
 @media screen and (max-width: 768px) {
-    .about-project__header {
+    .about-project {
         padding-top: 90px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .about-project__header {
+    .about-project {
         padding-top: 70px;
     }
 }

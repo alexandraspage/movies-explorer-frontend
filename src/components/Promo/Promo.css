@@ -1,20 +1,14 @@
 .promo{
     background-color: #F3C1F8;
     position: relative;
-    height: 524px;
 }
 
 .promo__cover{
     max-width: 1280px;
-    height: 524px;
     margin-left: auto;
     margin-right: auto;
 }
-@media screen and (max-width: 500px){
-    .promo__cover{
-        height: 570px;
-    }
-}
+
 .promo__image{
     position: absolute;
     width: 320px;
@@ -44,6 +38,7 @@
     .promo__name{
         width: calc(100% - 38px);
         padding-top: 326px;
+        margin-bottom: 342px;
     }
 }
 @media screen and (max-width: 500px){
@@ -53,12 +48,11 @@
         line-height: 39px;
         padding-top: 207px;
         letter-spacing: -1.24px;
+        margin-bottom: 246px;
     }
 }
 @media screen and (max-width: 768px){
-    .promo{
-        height: 784px;
-    }
+   
     .promo__image{
         top: 224px;
     }
@@ -68,8 +62,5 @@
         width: 248px;
         height: 248px;
         top: 142px;
-    }
-    .promo{
-        height: 570px;
     }
 }
