@@ -43,6 +43,10 @@
 @media screen and (max-width: 500px) {
     .nav__signin {
         font-size: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
 }
 
@@ -55,55 +59,71 @@
     text-align: right;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 18px;
     text-decoration: none;
 }
 
-.nav__link:last-of-type {
-    margin-left: 30px;
-    margin-right: 0;
-}
-.nav__link_account{
+.nav__link_account {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
+    padding-left: 30px;
 }
-.account-link{
+
+.nav__link:last-of-type {
+    margin-left: 20px;
+}
+
+.account-link {
     margin: 0;
     padding-top: 4px;
 }
+
 .nav__account-btn {
-    margin-left: 13px;
     background-color: #F9F9F9;
     background-image: url('../../images/icon__account.svg');
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: 0;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     background-repeat: no-repeat;
     background-position: center;
     padding: 0;
+    margin: 0;
+    align-self: center;
+}
+
+.nav-account-btn-box {
+    width: 30px;
+    height: 30px;
+    background-color: #F9F9F9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
 }
 
 .nav__link:hover {
     opacity: 0.7;
 }
-
-.nav__here {
-    text-decoration: underline;
+.active{
+    font-weight: 500;
 }
+
 
 .nav__navbar {
     display: flex;
     flex-direction: row;
 }
-.nav__navbar-container{
+
+.nav__navbar-container {
     display: flex;
     flex-direction: row;
-    margin-top: 28px;
+    margin-top: 54px;
 }
 
 .nav__open-btn {
@@ -138,7 +158,7 @@
     text-align: center;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     visibility: hidden;
 }
@@ -146,12 +166,13 @@
 @media screen and (max-width: 768px) {
     .nav__close-btn {
         visibility: visible;
-        width: 22px;
+        width: 32px;
+        height: 30px;
         align-self: flex-end;
-        margin-top: 22px;
+        margin-top: 23px;
         margin-right: 22px;
         position: absolute;
-        
+
     }
 
     .nav__open-btn {
@@ -184,6 +205,7 @@
         position: fixed;
         justify-content: space-between;
         margin-top: 0;
+        margin-right: 0;
     }
 
     .navbar__opened {
@@ -197,6 +219,7 @@
         line-height: normal;
         margin-bottom: 28px;
     }
+
     .nav__link:last-of-type {
         margin-left: 0;
     }
@@ -204,25 +227,60 @@
     .nav__link_main {
         visibility: visible;
     }
-    .nav__link_account{
+
+    .nav__link_account {
         margin-bottom: 92px;
         align-items: center;
         justify-content: center;
+        font-size: 14px;
+        line-height: 16px;
+        padding-left: 0;
     }
-    .nav__links{
+
+    .nav__links {
         display: flex;
         flex-direction: column;
-        margin-top: 159px;
+        margin-top: 161px;
         align-items: center;
+    }
+    .active {
+        border-bottom: 2px solid black;
+        font-weight: 400;
     }
 
 }
+
 @media screen and (max-width: 520px) {
-    .nav__navbar-container{
+    .nav__navbar-container {
         width: 100vw;
     }
-    .nav__link{
-        margin-bottom: 24px;
+
+    .nav__link {
+        margin-bottom: 18px;
+        padding-bottom: 6px;
+    }
+    .nav__open-btn{
+        width: 29px;
+        height: 36px;
+        background-size: 40px 43px;
+        margin-right: 8px;
+    }
+    .nav__close-btn{
+        margin-top: 14px;
+        margin-right: 13px;
+    }
+    .nav__links{
+        margin-top: 145px;
+    }
+    .nav__link_account{
+        margin-bottom: 42px;
+    }
+    .account-link{
+        padding-top: 0;
+    }
+    .active {
+        border-bottom: 2px solid black;
+        font-weight: 400;
     }
 
 }

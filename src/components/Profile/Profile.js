@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from '../Header/Header';
+import { Link } from 'react-router-dom';
 
-function Profile(){
-    return(
-        <section>
+function Profile() {
+    return (
+        <>
             <Header page="movies"></Header>
-            <div className='profile'>
+            <main className='profile'>
                 <h1 className='profile__hello'>Привет, Александра</h1>
                 <form className='profile__info'>
                     <div className='profile__name'>
@@ -18,10 +19,9 @@ function Profile(){
                     </div>
                 </form>
                 <button type='submit' className='profile__change-button'>Редактировать</button>
-                <button className='profile__exit'>Выйти из аккаунта</button>
-            </div>
-
-        </section>
+                <Link to='/' replace className='profile__exit'>Выйти из аккаунта</Link>
+            </main>
+        </>
 
     )
 }

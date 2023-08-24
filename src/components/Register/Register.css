@@ -35,13 +35,13 @@
     line-height: normal;
     text-align: left;
     margin: 0;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 37px;
+    margin-bottom: 27px;
 }
 @media screen and (max-width: 540px) {
     .form__title {
-        margin-top: 50px;
-        margin-bottom: 70px;
+        margin-top: 47px;
+        margin-bottom: 71px;
     }
 }
 .form__container {
@@ -91,7 +91,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-top: 69px;
+    margin-top: 65px;
     cursor: pointer;
 }
 .form__submit:hover{
@@ -101,7 +101,7 @@
     .form__submit {
         width: 260px;
         font-size: 12px;
-        margin-top: 157px;
+        margin-top: 149px;
     }
 }
 
@@ -137,5 +137,6 @@
 @media screen and (max-width: 540px) {
     .form__link {
        font-size: 12px;
+       padding-left: 6px;
     }
 }

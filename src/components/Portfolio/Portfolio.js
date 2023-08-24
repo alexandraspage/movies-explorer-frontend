@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
     return (
         <section>
             <h4 className="portfolio">Портфолио</h4>
-            <div className="portfolio__links">
+            <a className="portfolio__links" target='blank' href='https://github.com/alexandraspage/how-to-learn.git' >
                 <p className="portfolio__page">Статичный сайт</p>
-                <a className="portfolio__pointer" target="blank" href="https://github.com/alexandraspage/how-to-learn.git">&#8599;</a>
-            </div>
-            <div className="portfolio__links">
+                <p className="portfolio__pointer">&#8599;</p>
+            </a>
+            <a className="portfolio__links" target="blank" href="https://alexandraspage.github.io/russian-travel/">
                 <p className="portfolio__page">Адаптивный сайт</p>
-                <a className="portfolio__pointer" target="blank" href="https://alexandraspage.github.io/russian-travel/">&#8599;</a>
-            </div>
-            <div className="portfolio__links">
+                <p className="portfolio__pointer">&#8599;</p>
+            </a>
+            <a className="portfolio__links" target="blank" href="https://mesto-practicum.nomoredomains.xyz/sign-in">
                 <p className="portfolio__page">Одностраничное приложение</p>
-                <a className="portfolio__pointer" target="blank" href="https://mesto-practicum.nomoredomains.xyz/sign-in">&#8599;</a>
-            </div>
+                <p className="portfolio__pointer">&#8599;</p>
+            </a>
         </section>
 
     )

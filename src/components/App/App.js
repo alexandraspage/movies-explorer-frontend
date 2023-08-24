@@ -10,7 +10,6 @@ import NotFoundError from '../NotFoundError/NotFoundError';
 
 function App() {
   return (
-  <div className='page'>
     <Routes>
       <Route path="/" element={<Main></Main>}></Route>
       <Route path="/movies" element={<Movies></Movies>}></Route>
@@ -20,8 +19,6 @@ function App() {
       <Route path='/signin' element={<Login></Login>}></Route>
       <Route path='*' element={<NotFoundError></NotFoundError>}></Route>
     </Routes>
-
-  </div>  
   );
 }
 

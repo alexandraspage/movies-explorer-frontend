@@ -4,14 +4,16 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 
-function SavedMovies(){
-    return(
-        <div className='movies'>
+function SavedMovies() {
+    return (
+        <>
             <Header page="movies"></Header>
-            <SearchForm></SearchForm>
-            <MoviesCardList class='hidden'></MoviesCardList>
+            <main>
+                <SearchForm></SearchForm>
+                <MoviesCardList class='hidden'></MoviesCardList>
+            </main>
             <Footer></Footer>
-        </div>
+        </>
 
     )
 }
