@@ -122,8 +122,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< Updated upstream
-=======
 }
 @media screen and (max-width:320px) {
     .search-form__submit-container{
@@ -139,5 +137,4 @@
     font-weight: 400;
     line-height: normal;
 
->>>>>>> Stashed changes
 }

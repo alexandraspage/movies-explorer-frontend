@@ -117,10 +117,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-<<<<<<< Updated upstream
-    margin-top: 69px;
-=======
->>>>>>> Stashed changes
     cursor: pointer;
 }
 
@@ -137,15 +133,11 @@
     .form__submit {
         width: 260px;
         font-size: 12px;
-<<<<<<< Updated upstream
-        margin-top: 157px;
-=======
     }
 
     .form__error {
         width: 410px;
         margin-top: 115px;
->>>>>>> Stashed changes
     }
 }
 
@@ -183,11 +175,7 @@
 
 @media screen and (max-width: 540px) {
     .form__link {
-<<<<<<< Updated upstream
-       font-size: 12px;
-=======
         font-size: 12px;
         padding-left: 6px;
->>>>>>> Stashed changes
     }
 }

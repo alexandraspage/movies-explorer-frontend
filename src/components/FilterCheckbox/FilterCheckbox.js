@@ -17,6 +17,7 @@ function FilterCheckbox(props){
     }, []);
 
     function onFilter(){
+        console.log('filtr')
         
         if(chbox.checked){
             return props.shortMovies(true)

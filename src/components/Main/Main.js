@@ -7,20 +7,6 @@ import AboutMe from '../AboutMe/AboutMe';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
-<<<<<<< Updated upstream
-function Main(){
-    return(
-        <>
-          <Header page="main"></Header>
-          <Promo></Promo>
-          <NavTab></NavTab>
-          <AboutProject></AboutProject>
-          <Techs></Techs>
-          <AboutMe></AboutMe>
-          <Footer></Footer>
-        </>
-    )
-=======
 function Main(props) {
   return (
     <>
@@ -34,7 +20,6 @@ function Main(props) {
       <Footer></Footer>
     </>
   )
->>>>>>> Stashed changes
 }
 
 export default Main;
