@@ -23,10 +23,12 @@ function MoviesCardList({ foundMovies, isLoading, button, error, searchError, on
     }, [size])
 
     function addCards() {
+        console.log(moviesShow)
         setMoviesShow(moviesShow + moreMoviesShow);
     }
 
     function handleMoviesShow() {
+        console.log(size)
 
         if (size > 1200) {
 

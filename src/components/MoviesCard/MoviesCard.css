@@ -124,9 +124,21 @@
     background-color: transparent;
     width: 21px;
     height: 21px;
+    visibility: visible;
 }
 
 .card__save-button_delete {
+    padding: 0;
+    cursor: pointer;
+    visibility: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border-radius: 30px;
     background-image: url('../../images/delete.svg');
     background-color: transparent;
     width: 21px;
@@ -137,7 +149,14 @@
     opacity: 0.8;
 }
 
+.card__save-button_delete:hover{
+    opacity: 0.8;
+}
+
 .card:hover .card__save-button {
+    visibility: visible;
+}
+.card_saved:hover .card__save-button_delete {
     visibility: visible;
 }
 
@@ -145,14 +164,17 @@
     .card__title {
         padding-left: 0;
     }
-}
-
-@media screen and (max-width: 650px) {
-    .card:nth-child(n + 6) {
-        display: none;
+    .card__save-button:hover {
+        opacity: 1;
     }
-
+    .card__save-button{
+        visibility: visible;
+    }
+    .card__save-button_delete{
+        visibility: visible;
+    }
 }
+
 
 @media screen and (max-width:320px) {
     .card__time {
@@ -163,8 +185,4 @@
         margin-top: 12px;
     }
 
-}
-
-.card.is-visible {
-    display: block;
 }

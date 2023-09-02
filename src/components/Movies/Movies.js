@@ -8,41 +8,46 @@ import useResize from '../../utils/useResize';
 function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies }) {
 
     const [foundMovies, setFoundMovies] = useState([]);
-  const [isMovies, setIsMovies] = useState(false);
+  const [isMovies, setIsMovies] = useState();
     const [isFilterOn, setFilterOn] = useState();
     const [searchError, setSearchError] = useState(false)
 
     const size = useResize();
-    console.log(movies)
+  //  console.log(movies)
     // console.log(foundMovies)
 
     useEffect(() => {
         searchResult()
+        console.log('searchRes')
     }, [movies, isFilterOn]);
 
     useEffect(() => {
         if (localStorage.getItem('foundMovies')) {
             setFoundMovies(JSON.parse(localStorage.getItem('foundMovies')));
-
+    console.log('local');
+    setIsMovies(true);
         }
     }, []);
 
     function handleSearch() {
         setSearchError(false)
         if (movies.length > 0) {
+            setIsMovies(true)
             searchResult();
             console.log('ok')
             console.log(isMovies)
         } else {
             setIsMovies(true)
-            console.log('api')
             onSearch();
-        //    searchResult();
         }
     }
 
     function handleFilter(value) {
         setFilterOn(value)
+        console.log(value)
+        if(value === false){
+            localStorage.removeItem('checkbox');
+        }
         // localStorage.removeItem('checkbox');
       /*  if (value === true) {
 
@@ -72,15 +77,14 @@ function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies })
             })
            // console.log(shortMoviesResult);
             setFoundMovies(shortMoviesResult);
-            localStorage.setItem('foundMovies', JSON.stringify(shortMoviesResult));
-           localStorage.setItem('checkbox', isFilterOn);
+            localStorage.setItem('foundMovies', JSON.stringify(shortMoviesResult))
 
             if(shortMoviesResult.length === 0){
                 setSearchError(true)
             } else {
                 setSearchError(false)
             }
-        }else if (isMovies) {   // выполняется всегда только если не ошибка сервера
+        }else if (isMovies) {   
             console.log('search')
             console.log(isMovies)
             const searchResult = movies.filter((item) => {
@@ -97,9 +101,9 @@ function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies })
                 setSearchError(false)
             }
 
-            if (localStorage.getItem('checkbox')) {
-                localStorage.removeItem('checkbox');
-            };
+          //  if (localStorage.getItem('checkbox')) {
+           //     localStorage.removeItem('checkbox');
+           // };
 
         }
     }

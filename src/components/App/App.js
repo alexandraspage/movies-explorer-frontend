@@ -17,18 +17,22 @@ import ProtectedRouteElement from '../ProtectedRoute/ProtectedRoute';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
-  const [error, setError] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [registerError, setRegisterError] = useState('');
+  const [profileError, setProfileError] = useState('');
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [connectionError, setConnectionError] = useState(false)
   const [savedMovies, setSavedMovies] = useState([])
   const [isMovies, setIsMovies] = useState(false);
+  const [answer, setAnswer] = useState(false)
 
   const navigate = useNavigate();
   const location = useLocation();
   const { resetForm } = useFormWithValidation();
 
  // console.log(movies)
+
 
   useEffect(() => {
     tokenCheck();
@@ -51,7 +55,7 @@ function App() {
         }
       })
       .catch((err) => {
-        setError(err);
+        setLoginError(err);
       })
   }
 
@@ -63,20 +67,19 @@ function App() {
         console.log('ok');
       })
       .catch((err) => {
-        setError(err);
+        setRegisterError(err);
       })
   };
 
   function handleProfileSubmit({ name, email }) {
-    console.log('ok')
     mainApi.changeUserInfo({ name, email })
       .then((data) => {
-        console.log(data)
         setCurrentUser(data)
-
+        setAnswer(true)
+        tokenCheck();
       })
       .catch((err) => {
-        setError(err);
+        setProfileError(err);
       })
   }
 
@@ -166,9 +169,9 @@ function App() {
           <Route path="/" element={<Main isLoggedIn={loggedIn}></Main>}></Route>
           <Route path="/movies" element={<ProtectedRouteElement loggedIn={loggedIn} element={Movies} isMovies={isMovies} savedMovies={savedMovies} error={connectionError} onCardSave={handleSaveCard} movies={movies} isLoading={isLoading} onSearch={getMovies} />}></Route>
           <Route path="/saved-movies" element={<ProtectedRouteElement loggedIn={loggedIn} element={SavedMovies} onCardDelete={handleDeleteCard} savedMovies={savedMovies}/>}></Route>
-          <Route path='/profile' element={<ProtectedRouteElement loggedIn={loggedIn} element={Profile} signOut={signOut} handleProfileSubmit={handleProfileSubmit} />}></Route>
-          <Route path='/signup' element={<Register error={error} handleRegister={handleRegisterSubmit}></Register>}></Route>
-          <Route path='/signin' element={<Login error={error} handleLogin={handleLogin}></Login>}></Route>
+          <Route path='/profile' element={<ProtectedRouteElement loggedIn={loggedIn} element={Profile} answer={answer} signOut={signOut} handleProfileSubmit={handleProfileSubmit} />}></Route>
+          <Route path='/signup' element={<ProtectedRouteElement loggedIn={!loggedIn} element={Register} error={registerError} handleRegister={handleRegisterSubmit}></ProtectedRouteElement>}></Route>
+          <Route path='/signin' element={<ProtectedRouteElement loggedIn={!loggedIn} element={Login} error={loginError} handleLogin={handleLogin}></ProtectedRouteElement>}></Route>
           <Route path='*' element={<NotFoundError></NotFoundError>}></Route>
         </Routes>
       </CurrentUserContext.Provider>

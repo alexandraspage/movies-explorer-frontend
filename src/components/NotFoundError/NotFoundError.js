@@ -5,7 +5,7 @@ function NotFoundError(){
 const navigate = useNavigate();
 
 function goBack(){
-    navigate(-1);
+    navigate(-3);
 }
     return(
         <section className='error'>

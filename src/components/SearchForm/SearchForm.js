@@ -42,7 +42,6 @@ function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMovi
         } else {
             setError('')
             onSavedMoviesSubmit(input.value.toLowerCase());
-            localStorage.setItem('request', document.getElementById('movie').value.toLowerCase());
         };
     }
 
