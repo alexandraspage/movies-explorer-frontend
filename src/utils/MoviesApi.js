@@ -14,7 +14,6 @@ export function getMovies() {
         method: `GET`,
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem('token')}`
         },
     })
         .then((res) => checkResponse(res));
