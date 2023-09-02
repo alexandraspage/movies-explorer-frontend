@@ -9,7 +9,7 @@ function Header(props) {
         <header className={`header ${props.page}-header`}>
             <Link replace to='/'><img className="header__logo" src={logo} alt='логотип' /></Link>
             <div className="header__container">
-                <Navigation></Navigation>
+                <Navigation isLoggedIn={props.isLoggedIn}></Navigation>
             </div>
         </header>
     )

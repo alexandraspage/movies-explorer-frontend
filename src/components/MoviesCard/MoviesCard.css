@@ -3,15 +3,30 @@
     position: relative;
     cursor: pointer;
 }
-
+.card_saved{
+    width: 360px;
+    position: relative;
+    cursor: pointer; 
+}
+/*
+.card:nth-child(n + 13) {
+    display: none;
+}
+*/
 @media screen and (max-width: 900px) {
     .card {
+        width: 339px;
+    }
+    .card_saved {
         width: 339px;
     }
 }
 
 @media screen and (max-width: 750px) {
     .card {
+        width: 300px;
+    }
+    .card_saved {
         width: 300px;
     }
 }
@@ -39,7 +54,24 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+<<<<<<< Updated upstream
     margin-top: 14px;
+=======
+    margin-top: 11px;
+}
+/*
+@media screen and (max-width: 1200px) {
+    .card:nth-child(n + 7) {
+        display: none;
+    }
+}
+*/
+
+@media screen and (max-width:768px) {
+    .card__conteiner {
+        margin-top: 21px;
+    }
+>>>>>>> Stashed changes
 }
 
 .card__title {
@@ -61,6 +93,7 @@
 }
 
 .card__time {
+    width: 60px;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -90,10 +123,55 @@
     cursor: pointer;
 }
 
+.card__save-button_saved {
+    background-image: url('../../images/saved.svg');
+    background-color: transparent;
+    width: 21px;
+    height: 21px;
+}
+
+.card__save-button_delete {
+    background-image: url('../../images/delete.svg');
+    background-color: transparent;
+    width: 21px;
+    height: 21px;
+}
+
 .card__save-button:hover {
     opacity: 0.8;
 }
 
 .card:hover .card__save-button {
     visibility: visible;
+<<<<<<< Updated upstream
+=======
+}
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card:nth-child(n + 6) {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .card__time {
+        padding-right: 7px;
+    }
+
+    .card__conteiner {
+        margin-top: 12px;
+    }
+
+}
+
+.card.is-visible {
+    display: block;
+>>>>>>> Stashed changes
 }

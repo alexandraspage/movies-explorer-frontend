@@ -3,9 +3,10 @@ import { useRef } from "react";
 import { NavLink } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 
-function Navigation() {
+function Navigation(props) {
 
     const location = useLocation();
+    const isLoggedIn = props.isLoggedIn;
 
     function isMain() {
         if (location.pathname === '/') {
@@ -24,7 +25,7 @@ function Navigation() {
 
     return (
         <section>
-            {isMain() ?
+            {isMain() && !isLoggedIn ?
                 <nav>
                     <NavLink to="/signup" replace className="nav__registration">Регистрация</NavLink>
                     <NavLink to="/signin" replace className="nav__signin">Войти</NavLink>

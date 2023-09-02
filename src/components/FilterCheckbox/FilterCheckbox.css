@@ -2,6 +2,7 @@
     margin-right: 30px;
     padding-left: 29px;
     visibility: visible;
+    position: relative;
 }
 @media screen and (max-width: 630px){
     .search-checkbox{
@@ -29,10 +30,11 @@
 }
 .invisible-checkbox {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: max-content;
+    top: 5px;
+    left: 40px;
     overflow: hidden;
-    clip-path: inset(0 0 0 0);
+    opacity: 0;
 } 
 .visible-checkbox{
     display: inline-block;

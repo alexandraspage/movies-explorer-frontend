@@ -90,6 +90,7 @@
     line-height: normal;
     margin-bottom: 16px;
     cursor: pointer;
+    width: 410px;
 }
 .profile__change-button:hover{
     opacity: 0.8;
@@ -101,7 +102,12 @@
 }
 @media screen and (max-width: 450px){
     .profile__change-button{
+<<<<<<< Updated upstream
         margin-top: 379px;
+=======
+        margin-top: 361px;
+        width: 260px;
+>>>>>>> Stashed changes
     }
 }
 .profile__exit{
@@ -109,7 +115,12 @@
     -moz-appearance: none;
     appearance: none;
     border: 0;
+<<<<<<< Updated upstream
     background-color: #FFF;
+=======
+    padding: 0;
+    background-color: transparent;
+>>>>>>> Stashed changes
     color:  #FF4062;
     text-align: center;
     font-size: 13px;
@@ -120,4 +131,7 @@
 }
 .profile__exit:hover{
     opacity: 0.8;
+}
+.profile__form_type_notvalid{
+    color: rgba(194, 194, 194, 1);
 }

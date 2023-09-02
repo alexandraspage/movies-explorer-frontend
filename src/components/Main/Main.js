@@ -7,6 +7,7 @@ import AboutMe from '../AboutMe/AboutMe';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
+<<<<<<< Updated upstream
 function Main(){
     return(
         <>
@@ -19,6 +20,21 @@ function Main(){
           <Footer></Footer>
         </>
     )
+=======
+function Main(props) {
+  return (
+    <>
+      <Header isLoggedIn={props.isLoggedIn} page="main"></Header>
+      <main className='page-size'>
+        <Promo></Promo>
+        <AboutProject></AboutProject>
+        <Techs></Techs>
+        <AboutMe></AboutMe>
+      </main>
+      <Footer></Footer>
+    </>
+  )
+>>>>>>> Stashed changes
 }
 
 export default Main;
