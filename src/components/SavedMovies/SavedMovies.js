@@ -4,14 +4,6 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 
-<<<<<<< Updated upstream
-function SavedMovies(){
-    return(
-        <div className='movies'>
-            <Header page="movies"></Header>
-            <SearchForm></SearchForm>
-            <MoviesCardList class='hidden'></MoviesCardList>
-=======
 function SavedMovies({ savedMovies, onCardDelete }) {
 
     const [filteredMovies, setFilteredMovies] = useState([]);
@@ -82,9 +74,8 @@ console.log(isSearched)
                     isSearched ? filteredMovies :
                     savedMovies} searchError={searchError} onCardDelete={onCardDelete}></MoviesCardList>
             </main>
->>>>>>> Stashed changes
             <Footer></Footer>
-        </div>
+        </>
 
     )
 }

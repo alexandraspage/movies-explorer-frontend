@@ -26,16 +26,11 @@ function FilterCheckbox(props){
     }
 
     return(
-<<<<<<< Updated upstream
-    <label className={`${props.class}`}>
-        <input className="invisible-checkbox" type="checkbox" name="short-movie" id="short-movie" value="short-movie"></input>
-=======
     <section className={`${props.class}`}>
         <input className="invisible-checkbox" onChange={onFilter} type="checkbox" name="short-movie" id="short-movie" value="short-movie"></input>
->>>>>>> Stashed changes
         <span className="visible-checkbox"></span>
         <span className="checkbox-text">Короткометражки</span>
-    </label>
+    </section>
     )
 }
 

@@ -5,18 +5,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 import useResize from '../../utils/useResize';
 
-<<<<<<< Updated upstream
-function Movies(){
-    return(
-        <div className='movies'>
-            <Header page="movies"></Header>
-            <SearchForm></SearchForm>
-            <MoviesCardList></MoviesCardList>
-            <Footer></Footer>
-        </div>
-=======
 function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies }) {
->>>>>>> Stashed changes
 
     const [foundMovies, setFoundMovies] = useState([]);
   const [isMovies, setIsMovies] = useState(false);

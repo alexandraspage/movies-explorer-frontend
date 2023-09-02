@@ -54,9 +54,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-<<<<<<< Updated upstream
-    margin-top: 14px;
-=======
     margin-top: 11px;
 }
 /*
@@ -71,7 +68,6 @@
     .card__conteiner {
         margin-top: 21px;
     }
->>>>>>> Stashed changes
 }
 
 .card__title {
@@ -143,8 +139,6 @@
 
 .card:hover .card__save-button {
     visibility: visible;
-<<<<<<< Updated upstream
-=======
 }
 
 @media screen and (max-width: 768px) {
@@ -173,5 +167,4 @@
 
 .card.is-visible {
     display: block;
->>>>>>> Stashed changes
 }

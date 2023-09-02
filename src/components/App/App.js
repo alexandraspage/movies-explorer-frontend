@@ -160,20 +160,6 @@ function App() {
   }
 
   return (
-<<<<<<< Updated upstream
-  <div className='page'>
-    <Routes>
-      <Route path="/" element={<Main></Main>}></Route>
-      <Route path="/movies" element={<Movies></Movies>}></Route>
-      <Route path="/saved-movies" element={<SavedMovies></SavedMovies>}></Route>
-      <Route path='/profile' element={<Profile></Profile>}></Route>
-      <Route path='/signup' element={<Register></Register>}></Route>
-      <Route path='/signin' element={<Login></Login>}></Route>
-      <Route path='*' element={<NotFoundError></NotFoundError>}></Route>
-    </Routes>
-
-  </div>  
-=======
     <>
       <CurrentUserContext.Provider value={currentUser}>
         <Routes>
@@ -187,7 +173,6 @@ function App() {
         </Routes>
       </CurrentUserContext.Provider>
     </>
->>>>>>> Stashed changes
   );
 }
 

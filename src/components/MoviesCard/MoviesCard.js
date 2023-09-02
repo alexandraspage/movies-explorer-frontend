@@ -25,17 +25,6 @@ function MoviesCard({ card, onCardSave, isSaved, onCardDelete }) {
         onCardDelete(card)
     }
 
-<<<<<<< Updated upstream
-function MoviesCard(props){
-    return(
-        <div className='card'>
-            <img src={props.image} className='card__image' alt='обложка фильма'/>
-            <button className='card__save-button'>Сохранить</button>
-            <div className='card__conteiner'>
-                <h3 className='card__title'>{props.name}</h3>
-                <p className='card__time'>{props.time}</p>
-
-=======
     return (
         <section className={`${location.pathname==='/movies' ? 'card' : 'card_saved'}`}>
             <a className='card__link' href={card.trailerLink} target='blank'>
@@ -56,11 +45,10 @@ function MoviesCard(props){
                 `${card.nameRU}`
             : `${card.nameRu}`}</h3>
                 <p className='card__time'>{getTimeFromMins(card.duration)}</p>
->>>>>>> Stashed changes
             </div>
 
 
-        </div>
+        </section>
 
     )
 }
