@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import useResize from '../../utils/useResize';
 
+
 function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMoviesSearch }) {
 
     const [value, setValue] = useState('');
@@ -72,6 +73,7 @@ function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMovi
                         handleSavedSubmit}>
                     <input onChange={(e) => setValue(e.target.value)} id="movie" className="search-form__input" placeholder="Фильм"
                         type="text" name="movie" />
+
                     <div className='search-form__buttons-container'>
                         <div className='search-form__submit-container'>
                             <button className='search-form__submit' type='submit'>Найти</button>

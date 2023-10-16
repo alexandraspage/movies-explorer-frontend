@@ -4,6 +4,12 @@
     visibility: visible;
     position: relative;
 }
+@media screen and (max-width: 768px) {
+    .search-checkbox{
+        padding-left: 19px;
+        margin-right: 20px;
+    }
+}
 @media screen and (max-width: 630px){
     .search-checkbox{
         visibility: hidden;

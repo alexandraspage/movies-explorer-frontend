@@ -65,6 +65,7 @@ console.log(isSearched)
 
 
 
+
     return (
         <>
             <Header page="movies"></Header>

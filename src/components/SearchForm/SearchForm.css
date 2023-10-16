@@ -54,6 +54,8 @@
         visibility: hidden;
         width: 0;
         height: 0;
+        margin: 0;
+        margin-left: 20px;
     }
 }
 .search-form__input{
@@ -104,6 +106,7 @@
     -moz-appearance: none;
     appearance: none;
     border: 0;
+    padding: 0;
     width: 58.65px;
     height: 34px;
     border-radius: 48px;
@@ -127,6 +130,7 @@
     .search-form__submit-container{
         padding-left: 4px;
     }
+
 }
 .search-form__span{
     margin: 0;

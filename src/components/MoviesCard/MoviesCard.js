@@ -47,7 +47,6 @@ function MoviesCard({ card, onCardSave, isSaved, onCardDelete }) {
                 <p className='card__time'>{getTimeFromMins(card.duration)}</p>
             </div>
 
-
         </section>
 
     )
