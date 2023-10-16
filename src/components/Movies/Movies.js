@@ -5,6 +5,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 import useResize from '../../utils/useResize';
 
+
 function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies }) {
 
     const [foundMovies, setFoundMovies] = useState([]);
@@ -117,5 +118,6 @@ function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies })
 
             )
         }
+
 
 export default Movies;

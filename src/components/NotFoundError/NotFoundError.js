@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function NotFoundError(){
-const navigate = useNavigate();
+function NotFoundError() {
+    const navigate = useNavigate();
 
 function goBack(){
     navigate(-3);
@@ -18,4 +18,4 @@ function goBack(){
     )
 }
 
- export default NotFoundError;
+export default NotFoundError;

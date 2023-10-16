@@ -1,3 +1,4 @@
+
 import React, { useCallback } from "react";
 
 //хук управления формой
@@ -51,6 +52,7 @@ export function useFormWithValidation() {
         }
     }
 
+
     const resetForm = useCallback(
         (newValues = {}, newErrors = {}, newIsValid = false) => {
             setValues(newValues);
@@ -61,4 +63,5 @@ export function useFormWithValidation() {
     );
 
     return { values, handleChange, handleValue, errors, isValid, resetForm };
+
 }

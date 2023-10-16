@@ -78,6 +78,7 @@ function SavedMovies({ savedMovies, onCardDelete }) {
 
 
 
+
     return (
         <>
             <Header page="movies"></Header>

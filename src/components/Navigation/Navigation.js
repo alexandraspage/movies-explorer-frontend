@@ -2,6 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { NavLink } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
+import account from '../../images/icon__account.svg'
 
 function Navigation(props) {
 
@@ -40,7 +41,12 @@ function Navigation(props) {
                                 <NavLink to="/movies" replace className={`nav__link ${location.pathname === '/movies' ? `nav__here` : ``}`}>Фильмы</NavLink>
                                 <NavLink to="/saved-movies" replace className={`nav__link ${location.pathname === '/saved-movies' ? `nav__here` : ``}`}>Сохраненные фильмы</NavLink>
                             </div>
-                            <NavLink to="/profile" replace className="nav__link nav__link_account"><p className="account-link">Аккаунт</p><button className="nav__account-btn"></button></NavLink>
+                            <NavLink to="/profile" replace className="nav__link nav__link_account">
+                                <p className="account-link">Аккаунт</p>
+                                <div className="nav-account-btn-box">
+                                    <img src={account} alt='иконка' className="nav__account-btn"></img>
+                                </div>
+                            </NavLink>
                         </div>
                     </nav>
                     <button onClick={shawNavBar} className="nav__btn nav__open-btn"></button>

@@ -18,7 +18,7 @@
 }
 .profile__hello{
     margin-top: 74px;
-    margin-bottom: 123px;
+    margin-bottom: 109px;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -27,13 +27,13 @@
 @media screen and (max-width: 769px){
     .profile__hello{
         margin-top: 236px;
-        margin-bottom: 96px;
+        margin-bottom: 80px;
     }
 }
 @media screen and (max-width: 450px){
     .profile__hello{
         margin-top: 70px;
-        margin-bottom: 80px;
+        margin-bottom: 64px;
     }
 }
 .profile__info{
@@ -76,11 +76,12 @@
     margin-top: 16px;
 }
 .profile__change-button{
-    margin-top: 220px;
+    margin-top: 204px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: 0;
+    padding: 0;
     background-color: #FFF;
     color: #000;
     text-align: center;
@@ -97,7 +98,10 @@
 }
 @media screen and (max-width: 769px){
     .profile__change-button{
-        margin-top: 210px;
+        margin-top: 193px;
+    }
+    .profile__input-label{
+        margin-top: 18px;
     }
 }
 @media screen and (max-width: 450px){
@@ -120,6 +124,7 @@
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    text-decoration: none;
 }
 .profile__exit:hover{
     opacity: 0.8;

@@ -72,6 +72,7 @@ function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMovi
                         handleSavedSubmit}>
                     <input disabled={isLoading} onChange={(e) => setValue(e.target.value)} id="movie" className="search-form__input" placeholder="Фильм"
                         type="text" name="movie" />
+
                     <div className='search-form__buttons-container'>
                         <div className='search-form__submit-container'>
                             <button disabled={isLoading} className='search-form__submit' type='submit'>Найти</button>
