@@ -2,6 +2,7 @@
     margin-right: 30px;
     padding-left: 29px;
     visibility: visible;
+    position: relative;
 }
 @media screen and (max-width: 768px) {
     .search-checkbox{
@@ -20,10 +21,23 @@
     }
 }
 .separeted-checkbox{
+    position: relative;
     margin-right: 30px;
     padding-left: 29px;
     visibility: hidden;
 }
+
+.invisible-checkbox {
+    position: absolute;
+    width: max-content;
+    top: 0px;
+    left: 28px;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    width: 36px;
+    height: 20px;
+} 
 @media screen and (max-width: 630px){
     .separeted-checkbox{
         visibility: visible;
@@ -32,14 +46,10 @@
         margin: 0;
         margin-bottom: 45px;
     }
+    .invisible-checkbox{
+        left: 15px;
+    }
 }
-.invisible-checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(0 0 0 0);
-} 
 .visible-checkbox{
     display: inline-block;
     vertical-align: middle; 

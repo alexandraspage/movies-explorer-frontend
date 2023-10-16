@@ -7,10 +7,10 @@ import AboutMe from '../AboutMe/AboutMe';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
-function Main() {
+function Main(props) {
   return (
     <>
-      <Header page="main"></Header>
+      <Header isLoggedIn={props.isLoggedIn} page="main"></Header>
       <main className='page-size'>
         <Promo></Promo>
         <AboutProject></AboutProject>

@@ -1,4 +1,5 @@
-import React, { useCallback } from "./react";
+
+import React, { useCallback } from "react";
 
 //хук управления формой
 export function useForm() {
@@ -16,6 +17,7 @@ export function useForm() {
 
 //хук управления формой и валидации формы
 export function useFormWithValidation() {
+
     const [values, setValues] = React.useState({});
     const [errors, setErrors] = React.useState({});
     const [isValid, setIsValid] = React.useState(false);
@@ -27,7 +29,29 @@ export function useFormWithValidation() {
         setValues({ ...values, [name]: value });
         setErrors({ ...errors, [name]: target.validationMessage });
         setIsValid(target.closest("form").checkValidity());
-    };
+
+        const namePattern = /[A-Za-zА-Яа-яЁё\-\s]+$/;
+        if(!namePattern.test(values.name)){
+            setErrors({...errors, 'name': 'Имя должно содержать только латиницу, кириллицу, пробел или дефис. Иметь хотя бы два символа.'})
+            setIsValid(target.closest("form").checkValidity());
+        }  else {
+            setErrors({...errors, [name]: target.validationMessage});
+            setIsValid(target.closest("form").checkValidity());
+        }
+
+        console.log(value)
+
+        console.log(isValid)
+
+    }
+
+    const handleValue = (event, user) => {
+        if(event.target.value === user){
+            setIsValid(false);
+            setErrors({...errors, [event.target.name]: 'Введенные данные не должны совпадать с текущими'})
+        }
+    }
+
 
     const resetForm = useCallback(
         (newValues = {}, newErrors = {}, newIsValid = false) => {
@@ -38,5 +62,6 @@ export function useFormWithValidation() {
         [setValues, setErrors, setIsValid]
     );
 
-    return { values, handleChange, errors, isValid, resetForm };
+    return { values, handleChange, handleValue, errors, isValid, resetForm };
+
 }
