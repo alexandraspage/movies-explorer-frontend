@@ -2,7 +2,7 @@ import React from 'react';
 import { API_MOVIES } from '../../utils/MoviesApi';
 import { useLocation } from 'react-router-dom';
 
-function MoviesCard({ card, onCardSave, isSaved, onCardDelete }) {
+function MoviesCard({ card, onCardSave, isSaved, onCardDelete, updateMoviesList }) {
 
     const location = useLocation();
 
@@ -21,8 +21,15 @@ function MoviesCard({ card, onCardSave, isSaved, onCardDelete }) {
         console.log(card)
     }
 
+    function updateMovies(card){
+        updateMoviesList(card);
+    }
+
     function handleDelete(){
         onCardDelete(card)
+        
+            updateMovies(card);
+        
     }
 
     return (

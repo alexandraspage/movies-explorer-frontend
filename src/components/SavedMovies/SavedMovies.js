@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
+import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
 
 function SavedMovies({ savedMovies, onCardDelete }) {
 
@@ -10,8 +11,6 @@ function SavedMovies({ savedMovies, onCardDelete }) {
     const [isSearched, setIsSearched] = useState(false);
     const [searchError, setSearchError] = useState('');
     const [isFilterOn, setFilterOn] = useState();
-
-console.log(isSearched)
 
     function handleSubmit(value) {
         
@@ -63,6 +62,20 @@ console.log(isSearched)
         
     }
 
+    function updateMoviesList(card){
+        
+        
+        console.log(filteredMovies)
+        console.log(card)
+        if(isSearched){
+            
+            const newArrey = filteredMovies.filter((i) => i._id !== card._id);
+            setFilteredMovies(newArrey);
+        //    console.log(filteredMovies)
+
+        }
+    }
+
 
 
     return (
@@ -72,7 +85,7 @@ console.log(isSearched)
                 <SearchForm onSavedMoviesSubmit={handleSubmit} shortSavedMoviesSearch={shortSavedMoviesSearch}></SearchForm>
                 <MoviesCardList savedMovies={
                     isSearched ? filteredMovies :
-                    savedMovies} searchError={searchError} onCardDelete={onCardDelete}></MoviesCardList>
+                    savedMovies} searchError={searchError} onCardDelete={onCardDelete} updateMoviesList={updateMoviesList}></MoviesCardList>
             </main>
             <Footer></Footer>
         </>

@@ -49,6 +49,7 @@ function App() {
         if (data.jwt) {
           localStorage.setItem('token', data.jwt);
           setLoggedIn(true);
+          getSavedMovies();
           setCurrentUser(data.data)
           navigate('/movies', { replace: true });
           resetForm();
@@ -131,7 +132,6 @@ function App() {
   function getSavedMovies(){
     mainApi.getSavedMovies()
     .then((data) => {
-      console.log('getsaved')
       setSavedMovies(data);
     })
     .catch((err) => {

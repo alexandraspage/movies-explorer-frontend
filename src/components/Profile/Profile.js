@@ -54,17 +54,17 @@ function Profile(props) {
                                 <p className='profile__input-label'>Имя</p>
                                 <input className={`profile__input ${errors.length > 0 ? 'form__input_type_error' : ''}`} onChange={handleNameChange} id="profile-name" placeholder='имя' type="name" value={name ?? ''} name="name" minLength="2" maxLength="100" pattern='[A-Za-zА-Яа-яЁё\-\s]+$'></input>
                             </div>
-                            <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{JSON.stringify(errors.name) ?? ''}</span>
+                            <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.name ?? ''}</span>
                             <div className='profile__email'>
                                 <p className='profile__input-label'>E-mail</p>
                                 <input className={`profile__input ${errors.length > 0 ? 'form__input_type_error' : ''}`} onChange={handleEmailChange} id="profile-email" pattern='\S+@\S+\.\S+' value={email ?? ''} placeholder='email' type="email" name="email" minLength="2" maxLength="100"></input>
                             </div>
-                            <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{JSON.stringify(errors.email) ?? ''}</span>
+                            <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.email ?? ''}</span>
                         </div>
                         {props.answer ?
                             <span className='profile__span'>Данные профиля обновлены</span>
                             : ''}
-                        <button disabled={!isValid && isButton} type='submit' className={`profile__change-button ${!isValid && 'profile__form_type_notvalid'}`}>Редактировать</button>
+                        <button disabled={!isValid} type='submit' className={`profile__change-button ${!isValid && 'profile__form_type_notvalid'}`}>Редактировать</button>
                     </form>
                     <button onClick={props.signOut} className='profile__exit'>Выйти из аккаунта</button>
                 </section>

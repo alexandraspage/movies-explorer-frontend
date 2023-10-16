@@ -47,7 +47,7 @@ export function useFormWithValidation() {
     const handleValue = (event, user) => {
         if(event.target.value === user){
             setIsValid(false);
-
+            setErrors({...errors, [event.target.name]: 'Введенные данные не должны совпадать с текущими'})
         }
     }
 

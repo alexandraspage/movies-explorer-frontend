@@ -22,13 +22,13 @@ function Register(props) {
                     <div className='form__container'>
                         <label className='form__label'>Имя</label>
                         <input className={`form__input ${!isValid && 'form__input_type_error'}`} onChange={handleChange} id='register-name' type='name' required name='name' minLength="2" maxLength="40" placeholder='имя'></input>
-                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{JSON.stringify(errors.name) ?? ''}</span>
+                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.name ?? ''}</span>
                         <label className='form__label'>E-mail</label>
                         <input className={`form__input ${!isValid && 'form__input_type_error'}`} onChange={handleChange} id='register-email' type='email' pattern='\S+@\S+\.\S+' required name='email' minLength='2' maxLength='40' placeholder='e-mail'></input>
-                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{JSON.stringify(errors.email) ?? ''}</span>
+                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.email ?? ''}</span>
                         <label className='form__label'>Пароль</label>
                         <input className={`form__input ${!isValid && 'form__input_type_error'}`} onChange={handleChange} id='register-password' type='password' required name='password' minLength="2" maxLength="200" placeholder='password'></input>
-                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{JSON.stringify(errors.password) ?? ''}</span>
+                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.password ?? ''}</span>
                     </div>
                     <span className='form__error'>{props.error ?? ''}</span>
                     <button type='submit' disabled={!isValid} className={`form__submit ${isValid ? '' : 'form_notvalid'}`}>Зарегистрироваться</button>

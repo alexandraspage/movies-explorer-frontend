@@ -4,7 +4,7 @@ import Preloader from '../Preloader/Preloader';
 import useResize from '../../utils/useResize';
 import { useLocation } from 'react-router-dom';
 
-function MoviesCardList({ foundMovies, isLoading, button, error, searchError, onCardSave, savedMovies, onCardDelete }) {
+function MoviesCardList({ foundMovies, isLoading, button, error, searchError, onCardSave, savedMovies, onCardDelete, updateMoviesList }) {
   //  console.log(foundMovies);
 
     const size = useResize();
@@ -14,13 +14,9 @@ function MoviesCardList({ foundMovies, isLoading, button, error, searchError, on
     const [moviesShow, setMoviesShow] = useState(0);
     const [moreMoviesShow, setMoreMoviesShow] = useState(0);
 
-    let bigSizeCount = 12;
-    let mediumSizeCount = 6;
-    let smallSizeCount = 5;
-
     useEffect(() => {
         handleMoviesShow()
-    }, [size])
+    }, [size, foundMovies])
 
     function addCards() {
         console.log(moviesShow)
@@ -28,52 +24,19 @@ function MoviesCardList({ foundMovies, isLoading, button, error, searchError, on
     }
 
     function handleMoviesShow() {
-        console.log(size)
 
         if (size > 1200) {
 
-            /*    bigSizeCount += 3;
-                let array = Array.from(document.querySelector('.movies-list').children);
-                let visItems = array.slice(12, bigSizeCount);
-                console.log(visItems);
-                console.log(bigSizeCount)
-                visItems.forEach(el => el.classList.add('is-visible'));
-    
-                if (visItems.length + 12 === foundMovies.length) {
-                    document.querySelector('.movies-list__button').classList.remove('movies-list__button_active');
-                }
-                */
             setMoviesStart(12)
             setMoviesShow(12)
             setMoreMoviesShow(3)
 
         } else if (size > 650 && size <= 1200) {
 
-            /*   mediumSizeCount += 2;
-               let array = Array.from(document.querySelector('.movies-list').children);
-               let visItems = array.slice(6, mediumSizeCount);
-               console.log(visItems);
-               visItems.forEach(el => el.classList.add('is-visible'));
-   
-               if (visItems.length + 6 === foundMovies.length) {
-                   document.querySelector('.movies-list__button').classList.remove('movies-list__button_active');
-               }
-               */
             setMoviesStart(8)
             setMoviesShow(8)
             setMoreMoviesShow(2)
         } else if (size <= 650) {
-            /*
-                        smallSizeCount += 1;
-                        let array = Array.from(document.querySelector('.movies-list').children);
-                        let visItems = array.slice(5, smallSizeCount);
-                        console.log(visItems);
-                        visItems.forEach(el => el.classList.add('is-visible'));
-            
-                        if (visItems.length + 5 === foundMovies.length) {
-                            document.querySelector('.movies-list__button').classList.remove('movies-list__button_active');
-                        }
-                        */
             setMoviesStart(5)
             setMoviesShow(5)
             setMoreMoviesShow(2)
@@ -106,7 +69,7 @@ function MoviesCardList({ foundMovies, isLoading, button, error, searchError, on
                 {location.pathname === '/saved-movies' ?
                     savedMovies.map((card) => {
                         return (
-                            <MoviesCard isSaved={isMovieSaved(card, savedMovies)} onCardDelete={onCardDelete} key={card._id} card={card}></MoviesCard>
+                            <MoviesCard isSaved={isMovieSaved(card, savedMovies)} onCardDelete={onCardDelete} key={card._id} card={card} updateMoviesList={updateMoviesList}></MoviesCard>
                         )
                     })
                     : ''

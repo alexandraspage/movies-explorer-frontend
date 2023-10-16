@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import useResize from '../../utils/useResize';
 
-function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMoviesSearch }) {
+function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMoviesSearch, isLoading }) {
 
     const [value, setValue] = useState('');
     const [error, setError] = useState('');
@@ -70,11 +70,11 @@ function SearchForm({ onSubmit, shortMovies, onSavedMoviesSubmit, shortSavedMovi
                     location.pathname === '/movies' ?
                         handleSubmit :
                         handleSavedSubmit}>
-                    <input onChange={(e) => setValue(e.target.value)} id="movie" className="search-form__input" placeholder="Фильм"
+                    <input disabled={isLoading} onChange={(e) => setValue(e.target.value)} id="movie" className="search-form__input" placeholder="Фильм"
                         type="text" name="movie" />
                     <div className='search-form__buttons-container'>
                         <div className='search-form__submit-container'>
-                            <button className='search-form__submit' type='submit'>Найти</button>
+                            <button disabled={isLoading} className='search-form__submit' type='submit'>Найти</button>
                         </div>
                         {size > 630 ? 
                         <FilterCheckbox shortMovies={shortMoviesSearch} class='search-checkbox'></FilterCheckbox>

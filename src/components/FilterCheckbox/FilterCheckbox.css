@@ -24,10 +24,13 @@
 .invisible-checkbox {
     position: absolute;
     width: max-content;
-    top: 5px;
-    left: 40px;
+    top: 0px;
+    left: 28px;
     overflow: hidden;
     opacity: 0;
+    cursor: pointer;
+    width: 36px;
+    height: 20px;
 } 
 @media screen and (max-width: 630px){
     .separeted-checkbox{
