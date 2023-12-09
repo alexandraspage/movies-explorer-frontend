@@ -20,6 +20,7 @@ function App() {
   const [loginError, setLoginError] = useState('');
   const [registerError, setRegisterError] = useState('');
   const [profileError, setProfileError] = useState('');
+  const [error, setError] = useState('');
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [connectionError, setConnectionError] = useState(false)
@@ -32,7 +33,6 @@ function App() {
   const { resetForm } = useFormWithValidation();
 
  // console.log(movies)
-
 
   useEffect(() => {
     tokenCheck();
@@ -57,6 +57,7 @@ function App() {
       })
       .catch((err) => {
         setLoginError(err);
+        setError(err);
       })
   }
 
@@ -69,10 +70,12 @@ function App() {
       })
       .catch((err) => {
         setRegisterError(err);
+        setError(err);
       })
   };
 
   function handleProfileSubmit({ name, email }) {
+    /*
     mainApi.changeUserInfo({ name, email })
       .then((data) => {
         setCurrentUser(data)
@@ -81,6 +84,16 @@ function App() {
       })
       .catch((err) => {
         setProfileError(err);
+    console.log('ok')
+    */
+    mainApi.changeUserInfo({ name, email })
+      .then((data) => {
+        console.log(data)
+        setCurrentUser(data)
+
+      })
+      .catch((err) => {
+        setError(err);
       })
   }
 

@@ -94,6 +94,11 @@ function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies })
             } else {
                 setSearchError(false)
             }
+            /*
+            if (localStorage.getItem('checkbox')) {
+                localStorage.removeItem('checkbox');
+            };
+            */
 
         }
     }
@@ -118,6 +123,5 @@ function Movies({ movies, onSearch, isLoading, error, onCardSave, savedMovies })
 
             )
         }
-
 
 export default Movies;
