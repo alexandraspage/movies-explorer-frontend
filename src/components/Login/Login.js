@@ -22,10 +22,10 @@ function Login(props) {
                     <div className='form__container'>
                         <label className='form__label'>E-mail</label>
                         <input className={`form__input ${!isValid && 'form__input_type_error'}`} onChange={handleChange} id='login-email' type='email' required name='email' pattern='\S+@\S+\.\S+' minLength='2' maxLength='40' placeholder='e-mail'></input>
-                        <span className='form__span'>{JSON.stringify(errors.name) ?? ''}</span>
+                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.email ?? ''}</span>
                         <label className='form__label'>Пароль</label>
                         <input className={`form__input ${!isValid && 'form__input_type_error'}`} onChange={handleChange} id='login-password' type='password' required name='password' minLength="2" maxLength="200" placeholder='password'></input>
-                        <span className='form__span'>{JSON.stringify(errors.password) ?? ''}</span>
+                        <span className={`form__span ${!isValid && 'form__span_type_visible'}`}>{errors.password?? ''}</span>
                     </div>
                     <span className='form__error'>{props.error ?? ''}</span>
                     <button type='submit' disabled={!isValid}  className={`form__submit ${!isValid && 'form_notvalid'} login__submit`}>Войти</button>
