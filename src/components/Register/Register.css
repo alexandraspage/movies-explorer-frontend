@@ -151,12 +151,7 @@
     }
 
     .form__error {
-        width: 410px;
-        margin-top: 115px;
-    }
-
-    .form__error {
-        width: 410px;
+        width: 260px;
         margin-top: 115px;
     }
 }
@@ -199,5 +194,11 @@
     .form__link {
         font-size: 12px;
         padding-left: 6px;
+    }
+    .form__container{
+        max-width: 260px;
+    }
+    .form{
+        max-width: 260px;
     }
 }
